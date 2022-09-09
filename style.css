@@ -171,6 +171,9 @@ body > section:first-of-type p {
 body > section:first-of-type button:last-of-type {
 	padding: 0;
 	border-radius: 50%;
+	background-color: lightgray;
+	display: flex;
+	align-items: center;
 }
 
 body > section:first-of-type button:last-of-type img {
@@ -479,5 +482,13 @@ body > section:first-of-type button:last-of-type img {
 		display: flex;
 		align-items: center;
 		height: 60%;
+	}
+	
+	/* Modal cards */
+	#modal-back-project {
+		padding: 3%;
+		top: 20%;
+		left: 20%;
+		right: 20%;
 	}
 }

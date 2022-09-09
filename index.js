@@ -11,6 +11,8 @@ function loadEvents() {
 	const modalBackProject = document.querySelector("#modal-back-project");
 	const modalCompleted = document.querySelector("#modal-completed");
 
+	let bookmarked = false;
+
 	// Toggle menu on mobile devices
 	btnMenu.addEventListener("click", () => {
 		if (menuContent.style.display != "flex") {
@@ -33,8 +35,23 @@ function loadEvents() {
 
 	// Bookmark project
 	btnBookmarkProject.addEventListener("click", () => {
-		btnBookmarkProject.style.paddingRight = "50%";
-		btnBookmarkProject.style.borderRadius = "40px";
+		if (!bookmarked) {
+			btnBookmarkProject.style.borderRadius = "40px";
+			btnBookmarkProject.style.paddingRight = "50%";
+			btnBookmarkProject.children[1].innerHTML = "hi";
+			btnBookmarkProject.children[1].style.marginLeft = "10%";
+			bookmarked = true;
+		} else {
+			btnBookmarkProject.style.borderRadius = "50%";
+			btnBookmarkProject.style.paddingRight = "0";
+			btnBookmarkProject.children[1].innerHTML = "";
+			btnBookmarkProject.children[1].style.marginLeft = "0";
+			bookmarked = false;
+		}
+	});
+
+	btnCloseBackProject.addEventListener("click", () => {
+		modalBackProject.style.display = "none";
 	});
 }
 
