@@ -122,6 +122,7 @@ h1, h2, h3, strong, button, label { color: var(--black); }
 
 #menu-btn {
 	all: unset;
+	padding: 5%;
 }
 
 /* Sections */
@@ -139,7 +140,7 @@ body > section:nth-child(even) { margin: 5% 0; }
 body > section:first-of-type {
 	display: grid;
 	grid-template-rows: 1fr 1fr 1f 1fr;
-	grid-template-columns: 1fr 20%;
+	grid-template-columns: 1fr 40%;
 	margin-top: 50%;
 	gap: 0 3%;
 }
