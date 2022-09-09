@@ -10,6 +10,7 @@ html, body {
 	font-family: 'Commissioner', sans-serif;
 	font-size: 16px;
 	box-sizing: border-box;
+	transition: 0.2s;
 }
 
 img {
@@ -22,6 +23,11 @@ button {
 	font-weight: 700;
 	border: none;
 	border-radius: 30px;
+}
+
+button:hover {
+	background-color: var(--dark-cyan);
+	cursor: pointer;
 }
 
 input[type=number] {
@@ -41,6 +47,7 @@ input[type=number] {
 /* MOBILE SETTINGS */
 /* Body */
 body {
+	background-color: #f2f2f2;
 	background-image: url("images/image-hero-mobile.jpg");
 	background-repeat: no-repeat;
 	background-size: 100%;
@@ -101,6 +108,11 @@ h1, h2, h3, strong, button, label { color: var(--black); }
 	padding: 7%;
 	flex: 1;
 	font-size: 1.3rem;
+}
+
+.main-header nav a:hover {
+	text-decoration: underline;
+	cursor: pointer;
 }
 
 .main-header nav a:nth-child(even) {
@@ -338,4 +350,133 @@ body > section:first-of-type button:last-of-type img {
 
 #modal-completed button {
 	padding: 5% 10%;
+}
+
+/* LARGER DEVICES SETTINGS */
+@media screen and (min-width: 1081px) {
+	/* Body */
+	body {
+		background-image: url("images/image-hero-desktop.jpg");
+		background-size: 100%;
+	}
+
+	body > section {
+		width: 50%;
+		padding: 3%;
+	}
+
+	body > section:nth-child(even) {
+		margin: 2% 0;
+	}
+
+	/* Header */
+	#menu-btn {
+		display: none;
+	}
+
+	.main-header > nav {
+		all: unset;
+		position: static;
+		flex: 1;
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+	}
+
+	.main-header > nav * { all: unset; }
+
+	.main-header > nav a {
+		all: unset;
+		color: white;
+	}
+
+	.main-header > nav a:nth-child(even) {
+		border: none;
+		margin: 0 2%;
+	}
+
+	/* Introduction */
+	.project-intro {
+		margin-top: 10% !important;
+		grid-template-rows: 20% 20% 1fr 10%;
+	}
+
+	.project-intro > .logo-container img {
+		width: 15% !important;
+		margin-top: 15%;
+	}
+
+	.project-intro h1 {
+		margin: 0;
+	}
+
+	.project-intro p {
+		margin: 0 0 5% 0;
+	}
+
+	#back-project-btn {
+		justify-self: start;
+		padding-left: 10%;
+		padding-right: 10%;
+	}
+
+	#bookmark-project-btn {
+		justify-self: end;
+	}
+
+	#bookmark-project-btn:hover {
+		filter: contrast(0.2);
+	}
+
+	/* Project statistics */
+	.project-stats {
+		display: grid;
+		grid-template-rows: 1fr 5%;
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+
+	.project-stats > div {
+		margin: 0 !important;
+	}
+
+	.project-stats > div:nth-child(even) {
+		border-top: none;
+		border-bottom: none;
+		border-left: 1px solid lightgray;
+		border-right: 1px solid lightgray;
+	}
+
+	.project-stats .progress-bar {
+		grid-row: 2;
+		grid-column: 1 / 4;
+		margin-top: 5% !important;
+	}
+
+	.progress-bar > div {
+		padding: 1.5%;
+	}
+
+	/* About project */
+	.reward-card {
+		display: grid;
+		grid-template-rows: 10% 1fr 10%;
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.reward-card > a {
+		justify-self: end;
+	}
+
+	.reward-description {
+		grid-row: 2;
+		grid-column: 1 / 3;
+	}
+
+	.select-reward-btn {
+		justify-self: end;
+		align-self: center;
+		display: flex;
+		align-items: center;
+		height: 60%;
+	}
 }
