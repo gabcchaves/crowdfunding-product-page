@@ -247,6 +247,7 @@ section:nth-child(even) {
 	left: 5%;
 	right: 5%;
 	padding: 5%;
+	box-shadow: 0 0 100vh var(--black);
 }
 
 .modal-header {
@@ -284,6 +285,22 @@ section:nth-child(even) {
 
 .pledge-title > strong:first-of-type {
 	color: var(--black) !important;
+}
+
+.pledge-value {
+	display: grid;
+	grid-template-rows: auto auto;
+	grid-template-columns: 45% 55%;
+	border-top: 1px solid lightgray;
+}
+
+.pledge-value > input {
+	grid-row: 1;
+	grid-column: 1 / 3;
+	border: none;
+	appearance: textfield !important;
+	text-align: center;
+	padding: 10% 0;
 }
 
 #modal-completed {
