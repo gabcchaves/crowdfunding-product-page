@@ -350,3 +350,150 @@ section:nth-child(even) {
 	padding: 5% 10%;
 	margin-top: 5%;
 }
+
+/* LARGER SCREENS SETTINGS */
+@media screen and (min-width: 1081px) {
+	body {
+		background-image: url("images/image-hero-desktop.jpg");
+	}
+
+	/* Header */
+	.main-header > nav, .main-header > nav * {
+		all: unset !important;
+		color: white !important;
+	}
+
+	.main-header > nav {
+		display: flex !important;
+		width: 40% !important;
+		justify-content: flex-end !important;
+	}
+
+	.main-header > nav > a:nth-child(even) {
+		margin: 0 5% !important;
+	}
+
+	.main-header > nav > a:hover {
+		text-decoration: underline !important;
+		cursor: pointer !important;
+	}
+
+	#menu-btn {
+		display: none;
+	}
+
+	/* Sections */
+	section {
+		width: 50%;
+		padding: 2% !important;
+	}
+
+	section:nth-child(even) {
+		margin: 2% 0;
+	}
+
+	/* Project intro */
+	.project-intro .logo-container img {
+		width: 12%;
+		margin-top: -11%;
+	}
+
+	.project-intro p {
+		margin-bottom: 5%;
+	}
+
+	#btn-back-project {
+		width: 40%;
+	}
+
+	/* Project stats */
+	.project-stats {
+		display: grid;
+		grid-template-rows: auto auto;
+		grid-template-columns: auto auto auto;
+	}
+
+	.stat:nth-child(even) {
+		border: none;
+	}
+	
+	.progress-bar {
+		width: 100% !important;
+		height: 5% !important;
+		background-color: lightgray !important;
+		grid-column: 1 / 4;
+		border-radius: 30px;
+		margin-top: 3%;
+		height: 2vh !important;
+	}
+
+	.progress-bar > div {
+		background-color: var(--moderate-cyan) !important;
+		width: 80% !important;
+		height: 100% !important;
+		border-radius: 30px 0 0 30px;
+	}
+
+	/* Project about */
+	.reward {
+		display: grid;
+		grid-template-rows: auto auto auto;
+		grid-template-columns: auto auto;
+	}
+
+	.reward-condition {
+		justify-self: end;
+	}
+
+	.reward-description {
+		grid-column: 1 / 3;
+	}
+
+	.btn-select-reward {
+		justify-self: end;
+		align-self: center;
+	}
+
+	/* Modal boxes */
+	#modal-back-project {
+		display: flex;
+		left: 20%;
+		right: 20%;
+		padding: 3%;
+	}
+
+	.pledge {
+		display: grid;
+		grid-template-rows: auto auto auto;
+		grid-template-columns: 1fr auto;
+		gap: 0 5%;
+	}
+
+	.pledge-title {
+		display: flex;
+		align-items: center;
+		grid-row: 1;
+		grid-column: 1 / 4;
+	}
+
+	.pledge-title > input {
+		margin: 0;
+	}
+
+	.pledges-left {
+		grid-row: 1;
+		grid-column: 2;
+		display: flex;
+		align-items: center;
+	}
+
+	.pledges-left > strong {
+		color: var(--black);
+		font-size: 1.4rem;
+		margin-right: 5%;
+	}
+
+	.pledge-value {
+		display: grid;
+	}
+}
