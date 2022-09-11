@@ -226,6 +226,16 @@ section:nth-child(even) {
 	margin-right: 3%;
 }
 
+.btn-select-reward {
+	padding: 5% 10%;
+	border-radius: 30px;
+}
+
+.reward:last-of-type {
+	filter: contrast(0.5);
+}
+	
+
 /* Modal boxes */
 .modal-box {
 	display: none;
